@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets/home/favicon-32x32.png"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/src/css/destination.css" />
+    <title>Space tourism website</title>
+  </head>
+  <body>
+    <header>
+      <div id="logo">
+        <a href="/"
+          ><img src="/assets/home/logo.svg" alt="Logo tourism website"
+        /></a>
+      </div>
+      <div id="ham-menu">
+        <img
+          src="/assets/home/icon-hamburger.svg"
+          alt="Hamburger menu"
+          id="ham-menu-icon-open"
+          class=""
+        />
+        <img
+          src="/assets/home/icon-close.svg"
+          alt="Hamburger menu close"
+          id="ham-menu-icon-close"
+          class="hide"
+        />
+      </div>
+      <nav id="menu" class="">
+        <ul>
+          <li>
+            <a class="menu-item" href="/"><span>00</span> Home</a>
+          </li>
+          <li class="menu-active">
+            <a class="menu-item menu-select" href="#"
+              ><span>01</span> Destination</a
+            >
+          </li>
+          <li>
+            <a class="menu-item" href="/pages/crew-commander.html"
+              ><span>02</span> Crew</a
+            >
+          </li>
+          <li>
+            <a class="menu-item" href="/pages/technology-vehicle.html"
+              ><span>03</span> Technology</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h5 class="sub-heading"><span>01</span> Pick your destination</h5>
+      <img
+        src="/assets/destination/image-moon.png"
+        id="planet-photo"
+        alt="Moon photo"
+      />
+      <div class="destination">
+        <div class="tab-menu">
+          <a href="#" class="tab-item tab-item-select"> Moon </a>
+          <a href="/pages/destination-mars.html" class="tab-item"> Mars </a>
+          <a href="/pages/destination-europa.html" class="tab-item"> Europa </a>
+          <a href="/pages/destination-titan.html" class="tab-item"> Titan </a>
+        </div>
+        <h1 id="title">Moon</h1>
+        <p id="paragraph">
+          See our planet as you've never seen it before. A perfect relaxing trip
+          away to help regain perspective and come back refreshed. While you're
+          there, take in some history by visiting the Luna 2 and Apollo 11
+          landing sites.
+        </p>
+        <div id="sub-headings">
+          <div class="sub-heading-item">
+            <div class="sub1">Avg. distance</div>
+            <div class="sub2">384,400 km</div>
+          </div>
+          <div class="sub-heading-item">
+            <div class="sub1">Est. travel time</div>
+            <div class="sub2">3 days</div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="/src/js/main.js"></script>
+  </body>
+</html>

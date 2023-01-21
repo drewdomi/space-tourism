@@ -1,0 +1,96 @@
+@import 'main';
+@import 'nav-menu';
+
+main {
+  display: grid;
+  grid-template-columns: none;
+  grid-template-rows: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: calc(4.8rem - 2.4rem);
+  h5 {
+    color: $secondary-color;
+  }
+}
+
+#btn-explore {
+  @include sub-heading($font-heading, 2rem, 0.125rem, $primary-color);
+  margin-top: 7rem;
+  background-color: $white-color;
+  cursor: pointer;
+  height: 15rem;
+  width: 15rem;
+  border: none;
+  border-radius: 50%;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  justify-self: center;
+  justify-content: center;
+  align-items: center;
+  outline: solid 0 rgba(255, 255, 255, 0.2);
+  transition: outline-width 0.2s ease-in-out;
+  &:hover {
+    outline-width: 4.5rem;
+  }
+}
+@media (min-width: 550px) {
+  body {
+    background-image: url($bg-home-m);
+    main {
+      margin-top: calc(10.6rem - 2.4rem);
+      h5 {
+        align-self: center;
+        margin: 0;
+      }
+      #paragraph {
+        width: clamp(35rem, 19rem + 30vw, 55rem);
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  body {
+    background-image: url($bg-home-l);
+    main {
+      margin: clamp(15rem, 5rem + 10vh, 25rem) 0 0;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr;
+      text-align: left;
+      gap: 2.4rem;
+      .intro {
+        justify-content: left;
+        gap: 2.4rem;
+        display: flex;
+        flex-direction: column;
+        padding-left: clamp(5rem, 1rem + 8vw, 16.5rem);
+        h5 {
+          font-size: 2.8rem;
+          letter-spacing: 0.472rem;
+          align-self: flex-start;
+        }
+        h1#title {
+          font-size: 15rem;
+          line-height: normal;
+          align-self: flex-start;
+        }
+        p#paragraph {
+          font-size: 1.8rem;
+          text-align: left;
+          line-height: 3.2rem;
+          padding: 0;
+        }
+      }
+      #btn-explore {
+        // flex-basis: 50%;
+        height: 20rem;
+        width: 20rem;
+        grid-column: 2;
+        &:hover {
+          outline-width: 5rem;
+        }
+      }
+    }
+  }
+}

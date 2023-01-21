@@ -1,0 +1,82 @@
+$white-color: #ffffff;
+$gray-color: #979797;
+$primary-color: #0b0d17;
+$opacity-color: rgba(255, 255, 255, 0.25);
+$secondary-color: #d0d6f9;
+$line-break-color: #383b4b;
+$font-primary: 'Barlow Condensed', sans-serif;
+$font-heading: 'Bellefair', sans-serif;
+$font-body: 'Barlow', sans-serif;
+
+$bg-home-l: '/assets/home/bg-home-l.jpg';
+$bg-home-m: '/assets/home/bg-home-m.jpg';
+$bg-home-s: '/assets/home/bg-home-s.jpg';
+$bg-destination-l: '/assets/destination/bg-destination-l.jpg';
+$bg-destination-m: '/assets/destination/bg-destination-m.jpg';
+$bg-destination-s: '/assets/destination/bg-destination-s.jpg';
+$bg-crew-l: '/assets/crew/bg-crew-l.jpg';
+$bg-crew-m: '/assets/crew/bg-crew-m.jpg';
+$bg-crew-s: '/assets/crew/bg-crew-s.jpg';
+$bg-tech-l: '/assets/tech/bg-tech-l.jpg';
+$bg-tech-m: '/assets/tech/bg-tech-m.jpg';
+$bg-tech-s: '/assets/tech/bg-tech-s.jpg';
+$tech-launch-vehicle-land: '/assets/tech/launch-vehicle-land.jpg';
+$tech-launch-vehicle-port: '/assets/tech/launch-vehicle-port.jpg';
+
+$spaceport-land: '/assets/tech/spaceport-land.jpg';
+$spaceport-port: '/assets/tech/spaceport-port.jpg';
+
+$space-capsule-land: '/assets/tech/space-capsule-land.jpg';
+$space-capsule-port: '/assets/tech/space-capsule-port.jpg';
+
+@mixin heading($font-family, $font-size) {
+  font-family: $font-family;
+  font-size: $font-size;
+  text-transform: uppercase;
+}
+@mixin sub-heading($font-family, $font-size, $letter-spacing, $font-color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing;
+  font-weight: 400;
+  color: $font-color;
+}
+@mixin body-text($font-family, $font-size, $line-height, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  line-height: $line-height;
+  color: $color;
+}
+@mixin font-menu($font-family, $font-size, $letter-spacing, $color) {
+  font-family: $font-family;
+  font-size: $font-size;
+  letter-spacing: $letter-spacing;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: $color;
+}
+@mixin menu-blur {
+  background-color: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(4rem);
+}
+@mixin border-bottom {
+  border-bottom: solid 1px $line-break-color;
+}
+@keyframes menu-open-animation {
+  from {
+    right: -65%;
+  }
+  to {
+    right: 0;
+  }
+}
+@keyframes menu-close-animation {
+  from {
+    right: 0;
+  }
+  to {
+    right: -65%;
+  }
+}

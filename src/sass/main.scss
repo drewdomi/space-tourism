@@ -1,0 +1,64 @@
+@import 'resources';
+:root {
+  font-size: 62.5%;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: $white-color;
+}
+main {
+  #title {
+    @include heading($font-heading, 8rem);
+    line-height: 10rem;
+  }
+  h5 {
+    @include sub-heading($font-primary, 2rem, 2.7px, $white-color);
+    span {
+      font-weight: 700;
+    }
+  }
+  p {
+    @include body-text($font-body, 1.5rem, normal, $secondary-color);
+    line-height: 2.5rem;
+  }
+}
+h5 span {
+  opacity: 25%;
+}
+body {
+  background-color: $primary-color;
+  background-image: url($bg-home-s);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2.4rem;
+}
+
+main {
+  gap: 1.6rem;
+  p {
+    text-align: center;
+    padding: 0 2.4rem;
+  }
+}
+@media (min-width: 550px) {
+  main {
+    margin-top: 4rem;
+    h5.sub-heading {
+      align-self: flex-start;
+      margin-left: 3.8rem;
+    }
+  }
+}
+@media (min-width: 900px) {
+  h5.sub-heading {
+    font-size: 2.8rem;
+    letter-spacing: 0.47rem;
+  }
+}

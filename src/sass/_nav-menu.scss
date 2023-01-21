@@ -1,0 +1,137 @@
+@import 'resources';
+.hide {
+  display: none;
+}
+#menu.menu-open {
+  right: 0;
+  animation: menu-open-animation 0.5s;
+}
+#menu.menu-close {
+  right: -65%;
+  animation: menu-close-animation 0.5s;
+}
+a.menu-select {
+  border-color: $white-color;
+}
+#ham-menu {
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+#menu {
+  @include menu-blur;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  right: -65%;
+  height: 100%;
+  width: 65%;
+  color: black;
+  padding: 9rem 0 3.2rem 3.2rem;
+  ul {
+    margin-top: 4rem;
+    li {
+      list-style: none;
+      a {
+        padding: 0.5rem;
+        display: grid;
+        grid-template-columns: 4rem;
+        grid-template-areas: 'a b';
+        align-content: start;
+      }
+    }
+    span,
+    a {
+      @include font-menu($font-primary, 2.6rem, 0.27rem, $white-color);
+    }
+    a {
+      font-weight: 400;
+    }
+  }
+}
+.menu-item {
+  border-right: solid 0.7rem transparent;
+}
+@media (min-width: 550px) {
+  body header {
+    padding: 0;
+    #logo {
+      padding-left: 5rem;
+    }
+  }
+  #ham-menu {
+    display: none;
+  }
+  .menu-item {
+    border: none;
+  }
+  #menu {
+    position: initial;
+    display: grid;
+    place-items: center;
+    height: 9.6rem;
+    width: initial;
+    padding: 0 4.8rem;
+    ul {
+      margin-top: 0;
+      display: flex;
+      gap: 3.7rem;
+      height: 100%;
+      justify-content: space-between;
+      align-items: center;
+      li a {
+        display: initial;
+        font-size: 1.4rem;
+        padding: 0;
+        line-height: normal;
+        span {
+          display: none;
+        }
+      }
+      li::after {
+        content: '';
+        background-color: $gray-color;
+        height: 5px;
+        width: 0;
+        display: block;
+        position: relative;
+        top: 36px;
+        transition: width 0.3s;
+      }
+      li:hover::after {
+        width: 100%;
+      }
+      li.menu-active::after {
+        background-color: $white-color;
+        width: 100%;
+      }
+    }
+  }
+}
+@media (min-width: 900px) {
+  body header {
+    padding-top: 2.5rem;
+  }
+
+  header::after {
+    position: absolute;
+    content: '';
+    right: 685px;
+    z-index: 1;
+    display: block;
+    background-color: $gray-color;
+    height: 1px;
+    width: calc(100% - 824px);
+  }
+  #menu {
+    padding: 0 10rem 0 12rem;
+    ul li a {
+      letter-spacing: 0.27rem;
+      font-size: 1.6rem;
+      span {
+        font-size: 1.6rem;
+        display: initial;
+      }
+    }
+  }
+}

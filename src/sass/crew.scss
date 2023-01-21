@@ -1,0 +1,153 @@
+@import 'main';
+@import 'nav-menu';
+
+body {
+  background-image: url($bg-crew-s);
+}
+main {
+  display: grid;
+  place-items: center;
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas:
+    'a'
+    'b'
+    'c'
+    'd';
+  .img-container {
+    width: 80vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 3.2rem;
+    @include border-bottom;
+  }
+  .about-crew {
+    gap: 0.8rem;
+    margin-top: calc(3.2rem - 0.8rem);
+    margin-bottom: calc(4rem - 0.8rem);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  #crew-photo {
+    width: clamp(15rem, 10rem + 50vw, 17.7rem);
+  }
+  #role {
+    @include sub-heading($font-heading, 1.6rem, normal, $white-color);
+    opacity: 50%;
+  }
+  #name {
+    @include heading($font-heading, 2.4rem);
+    font-weight: 400;
+    margin-bottom: calc(1.6rem - 0.8rem);
+  }
+  #bio {
+    @include body-text($font-body, 1.5rem, 2.5rem, $secondary-color);
+  }
+}
+.slider {
+  width: 88px;
+  height: 10px;
+  display: flex;
+  .page-slider {
+    width: 1rem;
+    height: 1rem;
+    background-color: $gray-color;
+    margin: 0 0.6rem;
+    border-radius: 50%;
+    cursor: pointer;
+  }
+  .select-slider {
+    background-color: $white-color;
+  }
+}
+@media (min-width: 550px) {
+  body {
+    background-image: url($bg-crew-m);
+  }
+  main {
+    .sub-heading {
+      justify-self: left;
+    }
+    .slider {
+      grid-area: c;
+      .page-slider:hover {
+        background-color: $opacity-color;
+      }
+    }
+    .img-container {
+      grid-area: d;
+      border: none;
+      width: 100%;
+      margin-top: calc(4rem - 1.6rem);
+      #crew-photo {
+        width: clamp(30rem, 16rem + 50vw, 22.8rem);
+      }
+    }
+    .about-crew {
+      margin-top: calc(4rem - 0.8rem);
+      margin-bottom: calc(6rem - 0.8rem);
+      #role {
+        font-size: 2.4rem;
+      }
+      #name {
+        font-size: 4rem;
+      }
+      #bio {
+        font-size: 1.6rem;
+        line-height: 2.8rem;
+        width: clamp(35rem, 19rem + 30vw, 55rem);
+      }
+    }
+  }
+}
+
+@media (min-width: 900px) {
+  body,
+  html {
+    height: 100%;
+  }
+  body {
+    background-image: url($bg-crew-l);
+    display: flex;
+    flex-direction: column;
+  }
+  main {
+    margin: 3rem 10rem 0;
+    grid-template-areas:
+      'a d'
+      'b d'
+      'c d';
+    gap: 0;
+    justify-items: start;
+    align-items: end;
+    height: 100%;
+    h5.sub-heading {
+      margin: 0;
+    }
+    #name {
+      margin-bottom: 2rem;
+    }
+    .about-crew {
+      align-items: flex-start;
+      margin-top: 7rem;
+      margin-bottom: 7rem;
+      #bio {
+        max-width: 44rem;
+        text-align: left;
+        padding: 0;
+      }
+    }
+    .img-container {
+      align-self: flex-end;
+      margin: 0;
+
+      #crew-photo {
+        width: 35rem;
+      }
+    }
+    .slider {
+      margin-bottom: 9rem;
+    }
+  }
+}

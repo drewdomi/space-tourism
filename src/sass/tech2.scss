@@ -1,0 +1,15 @@
+@import 'tech';
+
+main {
+  #tech-img {
+    background-image: url($spaceport-land);
+  }
+}
+
+@media (min-width: 900px) {
+  main {
+    #tech-img {
+      background-image: url($spaceport-port);
+    }
+  }
+}
