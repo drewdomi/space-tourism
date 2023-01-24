@@ -8,6 +8,10 @@
   box-sizing: border-box;
   color: $white-color;
 }
+html,
+body{
+  height: 100%;
+}
 main {
   #title {
     @include heading($font-heading, 8rem);
