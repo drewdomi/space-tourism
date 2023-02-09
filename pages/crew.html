@@ -9,7 +9,7 @@
       rel="icon"
       type="image/png"
       sizes="32x32"
-      href="./assets/home/favicon-32x32.png"
+      href="/assets/home/favicon-32x32.png"
     />
     <link
       href="https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap"
@@ -45,7 +45,7 @@
             <a class="menu-item" href="/"><span>00</span> Home</a>
           </li>
           <li>
-            <a class="menu-item" href="/pages/destination-moon.html"
+            <a class="menu-item" href="/pages/destination.html"
               ><span>01</span> Destination</a
             >
           </li>
@@ -53,7 +53,7 @@
             <a class="menu-item menu-select" href="#"><span>02</span> Crew</a>
           </li>
           <li>
-            <a class="menu-item" href="/pages/technology-vehicle.html"
+            <a class="menu-item" href="/pages/technology.html"
               ><span>03</span> Technology</a
             >
           </li>
@@ -63,17 +63,23 @@
     <main>
       <h5 class="sub-heading"><span>02</span> Meet your crew</h5>
       <div class="img-container">
+        <button class="btns">PREV</button>
         <img
           src="/assets/crew/image-douglas-hurley.png"
           id="crew-photo"
           alt="Crew photo"
         />
+        <button class="btns">NEXT</button>
       </div>
       <div class="slider">
-        <a class="page-slider select-slider" href="#"></a>
-        <a href="/pages/crew-specialist.html" class="page-slider"></a>
-        <a href="/pages/crew-pilot.html" class="page-slider"></a>
-        <a href="/pages/crew-engineer.html" class="page-slider"></a>
+        <div
+          id="crew1"
+          class="page-slider select-slider"
+          onpointerdown=""
+        ></div>
+        <div id="crew2" class="page-slider"></div>
+        <div id="crew3" class="page-slider"></div>
+        <div id="crew4" class="page-slider"></div>
       </div>
       <div class="about-crew">
         <h5 id="role">Commander</h5>
@@ -85,6 +91,6 @@
         </p>
       </div>
     </main>
-    <script src="/src/js/main.js"></script>
+    <script type="module" src="/src/js/crew.js"></script>
   </body>
 </html>

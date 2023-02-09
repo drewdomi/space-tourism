@@ -36,11 +36,12 @@ main {
       text-decoration: none;
       padding: 0.8rem 0;
       border-bottom: solid 4px transparent;
+      cursor: pointer;
       &:hover {
         border-color: $opacity-color;
       }
     }
-    a.tab-item.tab-item-select {
+    .tab-item.tab-item-select {
       border-color: $white-color;
     }
   }

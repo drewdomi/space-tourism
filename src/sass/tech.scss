@@ -47,7 +47,7 @@ main {
   display: flex;
   gap: 1.6rem;
   margin-bottom: 2.6rem;
-  a {
+  div {
     display: flex;
     text-decoration: none;
     background-color: transparent;
@@ -58,15 +58,16 @@ main {
     align-items: center;
     border: solid 2px $opacity-color;
     border-radius: 50%;
+    cursor: pointer;
     span {
       @include sub-heading($font-heading, 1.6rem, 0.1rem, $white-color);
     }
   }
-  a:hover {
+  div:hover {
     border-color: $white-color;
   }
 
-  a.select-bullet {
+  div.select-bullet {
     background-color: $white-color;
     span {
       color: $primary-color;
@@ -118,7 +119,7 @@ main {
     .bullet-nav {
       flex-direction: column;
       margin: 0 8rem 0 3.8rem;
-      a {
+      div {
         width: 6rem;
         height: 6rem;
       }
