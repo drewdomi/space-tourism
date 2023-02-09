@@ -4,7 +4,8 @@
   "description": "A landing page about an space travel company.",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server"
+    "start": "lite-server",
+    "sass": "sass -wc --no-source-map --style=compressed src/sass/:src/css/"
   },
   "keywords": [],
   "author": "Drew Domi",
