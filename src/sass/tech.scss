@@ -13,7 +13,7 @@ main {
     'd';
   place-items: center;
   #tech-img {
-    background-color: #fff;
+    background-color: $white-color;
     background-image: url($tech-launch-vehicle-land);
     background-position: center;
     background-size: cover;
@@ -59,6 +59,7 @@ main {
     border: solid 2px $opacity-color;
     border-radius: 50%;
     cursor: pointer;
+    transition: all .4s;
     span {
       @include sub-heading($font-heading, 1.6rem, 0.1rem, $white-color);
     }
