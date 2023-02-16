@@ -21,20 +21,20 @@ main {
     align-items: end;
     margin-top: 3.2rem;
     @include border-bottom;
-    .btns{
+    .btns {
       cursor: pointer;
       background: transparent;
       align-self: center;
       border: solid 2px $white-color;
-      border-radius: .4rem;
+      border-radius: 0.4rem;
       opacity: 0.8;
       padding: 0.5rem;
       font-family: $font-primary;
       font-weight: bold;
-      letter-spacing: .1rem;
-      &:active{
+      letter-spacing: 0.1rem;
+      &:active {
         position: relative;
-        top: .1rem;
+        top: 0.1rem;
       }
     }
   }
@@ -50,7 +50,7 @@ main {
   }
   #crew-photo {
     width: clamp(15rem, 10rem + 50vw, 17.7rem);
-    transition: all .4s ease
+    transition: all 0.4s ease;
   }
   #role {
     @include sub-heading($font-heading, 1.6rem, normal, $white-color);
@@ -76,7 +76,7 @@ main {
     margin: 0 0.6rem;
     border-radius: 50%;
     cursor: pointer;
-    transition: background .5s;
+    transition: background 0.5s;
   }
   .select-slider {
     background-color: $white-color;
@@ -105,7 +105,7 @@ main {
       #crew-photo {
         width: clamp(30rem, 16rem + 50vw, 22.8rem);
       }
-      .btns{
+      .btns {
         align-self: flex-start;
         margin: 0 4rem;
       }
@@ -169,6 +169,15 @@ main {
     .img-container {
       align-self: flex-end;
       margin: 0;
+      .btns {
+        align-self: flex-start;
+        &:first-child {
+        margin-left: 0;
+        }
+        &:last-child {
+          margin-right: 0;
+        }
+      }
 
       #crew-photo {
         width: 35rem;
