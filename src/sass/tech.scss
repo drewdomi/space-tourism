@@ -117,9 +117,12 @@ main {
       font-size: 2.8rem;
       letter-spacing: 0.47rem;
     }
+    h5.sub-heading{
+      margin-left: 0;
+    }
     .bullet-nav {
       flex-direction: column;
-      margin: 0 8rem 0 3.8rem;
+      margin: 0 8rem 0 0;
       div {
         width: 6rem;
         height: 6rem;
