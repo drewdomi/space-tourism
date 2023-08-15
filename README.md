@@ -1,4 +1,11 @@
 # Space Tourism Project
+![IMG](assets/extras/home-sm.png)
+![IMG](assets/extras/launch.png)
+![IMG](assets/extras/navmenu.png)
+![IMG](assets/extras/home.png)
+![IMG](assets/extras/destination.png)
+
+[Clique aqui e veja Online](https://drew-space.netlify.app/)
 
 Bem-vindo ao repositório do projeto Space Tourism! Neste projeto, apresentamos uma empresa fictícia que oferece incríveis viagens espaciais para destinos emocionantes, incluindo a **Lua**, **Marte**, **Europa** e **Titã**. Aqui você encontrará informações detalhadas sobre a missão, tecnologias envolvidas e a equipe por trás dessa experiência única.
 
