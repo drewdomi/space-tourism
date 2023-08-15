@@ -1,6 +1,5 @@
 # Space Tourism Project
 ![IMG](assets/extras/home-sm.png)
-![IMG](assets/extras/launch.png)
 ![IMG](assets/extras/navmenu.png)
 ![IMG](assets/extras/home.png)
 ![IMG](assets/extras/destination.png)
