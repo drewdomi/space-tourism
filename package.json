@@ -1,16 +1,21 @@
 {
-  "name": "space-tourism-website",
+  "name": "space-tourism",
   "version": "1.0.0",
-  "description": "A landing page about an space travel company.",
+  "description": "Bem-vindo ao repositório do projeto Space Tourism! Neste projeto, apresentamos uma empresa fictícia que oferece incríveis viagens espaciais para destinos emocionantes, incluindo a **Lua**, **Marte**, **Europa** e **Titã**. Aqui você encontrará informações detalhadas sobre a missão, tecnologias envolvidas e a equipe por trás dessa experiência única.",
   "main": "index.js",
   "scripts": {
-    "start": "lite-server",
+    "dev": "npm-run-all -p start sass",
+    "start": " lite-server",
     "sass": "sass -wc --no-source-map --style=compressed src/sass/:src/css/"
   },
   "keywords": [],
-  "author": "Drew Domi",
+  "author": "",
   "license": "ISC",
+  "dependencies": {
+    "lite-server": "^2.6.1",
+    "sass": "^1.65.1"
+  },
   "devDependencies": {
-    "lite-server": "^2.6.1"
+    "npm-run-all": "^4.1.5"
   }
 }
